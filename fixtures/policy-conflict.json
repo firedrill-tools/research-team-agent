@@ -1,0 +1,29 @@
+{
+  "question": "How quickly should a Sev 2 incident be acknowledged?",
+  "sources": [
+    {
+      "source_id": "ops-2025",
+      "title": "Operations handbook, archived 2025 edition",
+      "as_of": "2025-06-01",
+      "topic": "sev2-acknowledgement",
+      "fact_value": "60 minutes",
+      "text": "Archived instruction: acknowledge a Sev 2 incident within 60 minutes. This edition was superseded in 2026."
+    },
+    {
+      "source_id": "ops-2026",
+      "title": "Operations handbook, current 2026 edition",
+      "as_of": "2026-09-01",
+      "topic": "sev2-acknowledgement",
+      "fact_value": "30 minutes",
+      "text": "Current instruction: acknowledge a Sev 2 incident within 30 minutes. Escalate to the incident commander if unacknowledged."
+    },
+    {
+      "source_id": "pager-2026",
+      "title": "Pager rotation note",
+      "as_of": "2026-09-15",
+      "topic": "sev2-escalation",
+      "fact_value": "incident commander",
+      "text": "The incident commander owns escalations for unacknowledged Sev 2 incidents."
+    }
+  ]
+}

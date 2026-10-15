@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "research-team-agent"
+version = "0.1.0"
+description = "CrewAI researcher, checker and writer over controlled source packs"
+requires-python = ">=3.12"
+dependencies = ["crewai==1.15.28"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/research_team"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
