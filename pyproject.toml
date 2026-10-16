@@ -7,7 +7,7 @@ name = "research-team-agent"
 version = "0.1.0"
 description = "CrewAI researcher, checker and writer over controlled source packs"
 requires-python = ">=3.12"
-dependencies = ["crewai==1.15.28"]
+dependencies = ["crewai==1.15.28", "openai==2.54.0", "anthropic==1.14.0", "google-genai==2.31.0", "httpx==0.28.1", "httpx2==2.13.1"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]

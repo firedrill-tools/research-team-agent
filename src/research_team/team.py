@@ -5,18 +5,29 @@ from __future__ import annotations
 import json
 import os
 
-from crewai import Agent, BaseLLM, Crew, LLM, Process, Task
+from crewai import Agent, BaseLLM, Crew, Process, Task
 
 from .schema import ResearchBrief, SourcePack, ResearchNotes, CheckReport
 
 
-def build_crew(pack: SourcePack, llm: BaseLLM | None = None) -> Crew:
+def build_crew(
+    pack: SourcePack,
+    llm: BaseLLM | None = None,
+    *,
+    llms=None,
+    callbacks=None,
+    strict_handoffs=False,
+    task_store_path=None,
+) -> Crew:
     pack = SourcePack.model_validate(pack).model_copy(deep=True)
-    if llm is None:
-        model = os.environ.get("RESEARCH_MODEL")
-        if not model:
-            raise RuntimeError("RESEARCH_MODEL is required for a live CrewAI run")
-        llm = LLM(model=model)
+    if llms is None:
+        if llm is None:
+            raise RuntimeError(
+                "use run_team or run_team_async to own native role resources"
+            )
+        llms = {"researcher": llm, "checker": llm, "writer": llm}
+    if set(llms) != {"researcher", "checker", "writer"}:
+        raise ValueError("three explicit role models are required")
     source_json = json.dumps(
         [source.model_dump() for source in pack.sources], sort_keys=True
     )
@@ -24,28 +35,31 @@ def build_crew(pack: SourcePack, llm: BaseLLM | None = None) -> Crew:
         role="Controlled-source researcher",
         goal="Find relevant claims in the supplied source pack",
         backstory="You do not browse or invent sources; you quote from the provided records.",
-        llm=llm,
+        llm=llms["researcher"],
         allow_delegation=False,
         verbose=False,
         max_iter=2,
+        max_retry_limit=0,
     )
     checker = Agent(
         role="Evidence and disagreement checker",
         goal="Challenge unsupported claims and identify contradictory source values",
         backstory="You are skeptical of unsupported claims and obsolete source versions.",
-        llm=llm,
+        llm=llms["checker"],
         allow_delegation=False,
         verbose=False,
         max_iter=2,
+        max_retry_limit=0,
     )
     writer = Agent(
         role="Research brief writer",
         goal="Produce a concise brief with exact quote anchors",
         backstory="You distinguish supported facts, conflicts and uncertainty.",
-        llm=llm,
+        llm=llms["writer"],
         allow_delegation=False,
         verbose=False,
         max_iter=2,
+        max_retry_limit=0,
     )
     research = Task(
         description=(
@@ -79,12 +93,42 @@ def build_crew(pack: SourcePack, llm: BaseLLM | None = None) -> Crew:
         agent=writer,
         context=[research, check],
     )
-    return Crew(
+    if strict_handoffs:
+        research.description += " Return a ResearchNotes JSON object: claims (text, source_id, exact_quote) and gaps (strings). Do not answer as a final brief."
+        check.description += " Return a CheckReport JSON object: reviews (claim_index zero-based, disposition supported/unsupported, reason), conflicts (exactly two source_ids, explanation), gaps (strings). Classify every candidate exactly once. Preserve research gaps."
+        write.description += " Copy only checker-supported candidate claims without changing their text/source_id/exact_quote. Copy checker conflicts and preserve every checker gap verbatim in uncertainties."
+    for role, task in (("researcher", research), ("checker", check), ("writer", write)):
+        if callbacks:
+            task.callback = callbacks[role]
+    crew_type = Crew
+    if task_store_path is not None:
+        from pydantic import PrivateAttr
+        from crewai.utilities.task_output_storage_handler import (
+            TaskOutputStorageHandler,
+        )
+        from crewai.memory.storage.kickoff_task_outputs_storage import (
+            KickoffTaskOutputsSQLiteStorage,
+        )
+
+        class OwnedHandler(TaskOutputStorageHandler):
+            def __init__(self):
+                from pathlib import Path
+
+                Path(task_store_path).touch(mode=0o600, exist_ok=False)
+                self.storage = KickoffTaskOutputsSQLiteStorage(str(task_store_path))
+
+        class LocalCrew(Crew):
+            _task_output_handler = PrivateAttr(default_factory=OwnedHandler)
+
+        crew_type = LocalCrew
+    return crew_type(
         agents=[researcher, checker, writer],
         tasks=[research, check, write],
         process=Process.sequential,
         verbose=False,
         memory=False,
+        tracing=False,
+        share_crew=False,
     )
 
 
@@ -169,11 +213,22 @@ def grade_brief(pack: SourcePack, brief: ResearchBrief) -> dict:
     }
 
 
-def run_team(pack: SourcePack, llm: BaseLLM | None = None) -> dict:
+def run_team(pack: SourcePack, llm: BaseLLM | None = None, **options) -> dict:
+    if llm is None:
+        import asyncio
+        from .worker import run_team_async
+
+        try:
+            asyncio.get_running_loop()
+        except RuntimeError:
+            return asyncio.run(run_team_async(pack, **options))
+        raise RuntimeError("use run_team_async from an active event loop")
     pack = SourcePack.model_validate(pack).model_copy(deep=True)
     result = build_crew(pack, llm).kickoff()
     brief = ResearchBrief.model_validate(_raw_json(result.raw))
-    return grade_brief(pack, brief)
+    report = grade_brief(pack, brief)
+    report["execution_kind"] = "caller_injected_llm"
+    return report
 
 
 def grade_handoff(pack, notes, checked, brief):

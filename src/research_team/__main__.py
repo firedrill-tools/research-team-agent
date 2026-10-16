@@ -1,27 +1,125 @@
-"""Run a CrewAI brief over a local source pack."""
+"""Run an owned CrewAI team over a local source snapshot with private failure proof."""
 
 import argparse
+import asyncio
 import json
+import logging
+import os
+import signal
+import sys
+import uuid
 from pathlib import Path
+from .evidence import read_pack
+from .native import ROLES
+from .worker import run_team_async
 
-from .schema import SourcePack
-from .team import run_team
+
+def save_report(path, value):
+    staged = path.with_name("." + str(uuid.uuid4()) + ".tmp")
+    try:
+        with staged.open("xb") as file:
+            os.chmod(staged, 0o600)
+            file.write(
+                (
+                    json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False)
+                    + "\n"
+                ).encode()
+            )
+            file.flush()
+            os.fsync(file.fileno())
+        os.link(
+            staged, path
+        )  # Exclusive atomic publication, including concurrent path collision.
+        fd = os.open(path.parent, os.O_RDONLY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+    finally:
+        staged.unlink(missing_ok=True)
 
 
-def main() -> None:
+async def execute(pack, source, args):
+    loop = asyncio.get_running_loop()
+    task = asyncio.current_task()
+    seen = []
+    previous = {}
+
+    def stop(number, frame):
+        if not seen:
+            seen.append(number)
+            task.cancel(f"Received {signal.Signals(number).name}")
+            loop.call_soon_threadsafe(lambda: None)
+
+    for name in ("SIGINT", "SIGTERM", "SIGHUP"):
+        if hasattr(signal, name):
+            number = getattr(signal, name)
+            previous[number] = signal.getsignal(number)
+            signal.signal(number, stop)
+    try:
+        result = await run_team_async(
+            pack,
+            source=source,
+            output_root=args.output_root,
+            timeout_seconds=args.timeout_seconds,
+            role_models={role: getattr(args, role + "_model") for role in ROLES},
+            role_base_urls={role: getattr(args, role + "_base_url") for role in ROLES},
+        )
+        return result, 0 if result["status"] == "supported" else 2
+    except asyncio.CancelledError as error:
+        number = seen[0] if seen else None
+        return {
+            "status": "interrupted",
+            "signal": signal.Signals(number).name if number else None,
+            "receipt_path": getattr(error, "receipt_path", None),
+        }, 128 + number if number else 130
+    finally:
+        for number, handler in previous.items():
+            signal.signal(number, handler)
+
+
+def main():
+    # The CLI emits one JSON result; original native diagnostics remain in its private trace.
+    logging.disable(logging.CRITICAL)
     parser = argparse.ArgumentParser(
-        description="Controlled-source CrewAI research brief"
+        description="Controlled-source CrewAI research team"
     )
-    parser.add_argument("pack", type=Path, help="source pack JSON")
-    parser.add_argument("--output", type=Path, help="save the evaluated brief JSON")
+    parser.add_argument("pack", type=Path)
+    parser.add_argument("--output", type=Path, help="exclusive private report file")
+    parser.add_argument("--output-root", type=Path)
+    parser.add_argument("--timeout-seconds", type=float, default=120)
+    for role in ROLES:
+        parser.add_argument("--" + role + "-model", help="explicit provider/model")
+        parser.add_argument(
+            "--" + role + "-base-url", help="explicit HTTPS or loopback HTTP endpoint"
+        )
     args = parser.parse_args()
-    pack = SourcePack.model_validate_json(args.pack.read_text())
-    report = run_team(pack)
-    serialized = json.dumps(report, indent=2)
-    if args.output:
-        args.output.write_text(serialized + "\n")
-    print(serialized)
+    if args.output is not None and os.path.lexists(args.output):
+        raise FileExistsError("report path already exists")
+    pack, source = read_pack(args.pack)
+    result, code = asyncio.run(execute(pack, source, args))
+    if args.output is not None:
+        try:
+            save_report(args.output, result)
+        except Exception as error:
+            error.receipt_path = result.get("receipt_path")
+            raise
+    print(json.dumps(result, indent=2, allow_nan=False))
+    return code
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        sys.exit(main())
+    except Exception as error:
+        print(
+            json.dumps(
+                {
+                    "status": "failed",
+                    "error": {"name": type(error).__name__, "message": str(error)},
+                    "receipt_path": getattr(error, "receipt_path", None),
+                }
+            ),
+            file=sys.stderr,
+        )
+        sys.exit(1)
