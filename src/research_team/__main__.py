@@ -9,7 +9,9 @@ from .team import run_team
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Controlled-source CrewAI research brief")
+    parser = argparse.ArgumentParser(
+        description="Controlled-source CrewAI research brief"
+    )
     parser.add_argument("pack", type=Path, help="source pack JSON")
     parser.add_argument("--output", type=Path, help="save the evaluated brief JSON")
     args = parser.parse_args()
