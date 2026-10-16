@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "case_id": "incident-target",
+      "profile": "starter",
+      "description": "Archived and current target disagree",
+      "file": "incident-target.json",
+      "sha256": "7115d29671166f6af3cd34e7777b65d78a5513d82b7bd48ae1d119d0a3d251a2",
+      "sources": 3
+    },
+    {
+      "case_id": "consistent-guidance",
+      "profile": "starter",
+      "description": "One current target with unrelated escalation source",
+      "file": "consistent-guidance.json",
+      "sha256": "9587229cf12cdc4f1924cb080a5209e9830681609bad12952f85f308798a5df0",
+      "sources": 2
+    },
+    {
+      "case_id": "corroborating-sources",
+      "profile": "starter",
+      "description": "Distinct source IDs repeat the same tagged value",
+      "file": "corroborating-sources.json",
+      "sha256": "a7e12cbe40fa933bb38a50286e370a0c23af127b39bf0486061164d1675b745a",
+      "sources": 3
+    },
+    {
+      "case_id": "busy-handbooks",
+      "profile": "busy",
+      "description": "Thirty-six coherent handbook editions across twelve topics; two requested topics",
+      "file": "busy-handbooks.json",
+      "sha256": "c60181b151904966cd8d01583d8c90d54731c5ea072c0056bc4f4ef94857e826",
+      "sources": 36
+    },
+    {
+      "case_id": "missing-topic",
+      "profile": "ambiguous",
+      "description": "Requested recovery objective has no supplied source",
+      "file": "missing-topic.json",
+      "sha256": "5cf51607833b130ba2b624a79fed4c38203addce4a07a3e8797454c50679a28e",
+      "sources": 2
+    },
+    {
+      "case_id": "equal-date-conflict",
+      "profile": "ambiguous",
+      "description": "Two same-date approved regional editions disagree",
+      "file": "equal-date-conflict.json",
+      "sha256": "abc42884d95dbf04d130885fc5688d72f85791851523f3325bc68283d1157709",
+      "sources": 2
+    },
+    {
+      "case_id": "unapproved-draft",
+      "profile": "ambiguous",
+      "description": "Published guidance and later unapproved draft differ",
+      "file": "unapproved-draft.json",
+      "sha256": "bcaf5d5ca987f24fd0d0dbb97bb13f42555e2ff70b1e03d5f3f1a56204988845",
+      "sources": 2
+    },
+    {
+      "case_id": "retired-only",
+      "profile": "ambiguous",
+      "description": "Only a superseded historical edition is supplied",
+      "file": "retired-only.json",
+      "sha256": "7f4283f2a0be140a1d27e12a288b2de062e8c8ed099498a048f80e422e7e1cf9",
+      "sources": 1
+    },
+    {
+      "case_id": "hostile-import",
+      "profile": "boundary",
+      "description": "Untrusted source includes instructions to expand scope",
+      "file": "hostile-import.json",
+      "sha256": "573c829c4501cd5f19f8dc741ff6c5c287be81380823bd622ab23877dbfd3932",
+      "sources": 2
+    },
+    {
+      "case_id": "three-way-disagreement",
+      "profile": "boundary",
+      "description": "Every pair among three distinct tagged values conflicts",
+      "file": "three-way-disagreement.json",
+      "sha256": "ca35f1ac16b26d243d56052c121f227eba11d03bf010cb15ed22bf65356e12ff",
+      "sources": 3
+    },
+    {
+      "case_id": "unicode-anchors",
+      "profile": "boundary",
+      "description": "Accented, curly-quoted and narrow-space source anchors",
+      "file": "unicode-anchors.json",
+      "sha256": "ae8d91867ab789ed20a6c5080ba3908660b7a18400ed9eeb4fc9a53eb27beb36",
+      "sources": 1
+    },
+    {
+      "case_id": "maximum-source-count",
+      "profile": "boundary",
+      "description": "Sixty-four sources with irrelevant background documents",
+      "file": "maximum-source-count.json",
+      "sha256": "257a0e3288bf2c98b1e6e9701bb0931bf4a83a73eefc42b5b5d11def1a124ac5",
+      "sources": 64
+    }
+  ]
+}

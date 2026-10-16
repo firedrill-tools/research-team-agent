@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "case_id": "busy-handbooks",
+  "profile": "busy",
+  "description": "Thirty-six coherent handbook editions across twelve topics; two requested topics",
+  "pack": {
+    "question": "Describe the fictional incident acknowledgement and escalation guidance, preserving conflicting editions.",
+    "sources": [
+      {
+        "source_id": "incident-ack-v1",
+        "title": "Fictional Meridian Operations incident-ack handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "incident-ack",
+        "fact_value": "60 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The incident-ack value in this edition is 60 minutes. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "incident-ack-v2",
+        "title": "Fictional Meridian Operations incident-ack handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "incident-ack",
+        "fact_value": "45 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The incident-ack value in this edition is 45 minutes. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "incident-ack-v3",
+        "title": "Fictional Meridian Operations incident-ack handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "incident-ack",
+        "fact_value": "30 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The incident-ack value in this edition is 30 minutes. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "escalation-v1",
+        "title": "Fictional Meridian Operations escalation handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "escalation",
+        "fact_value": "service owner",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The escalation value in this edition is service owner. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "escalation-v2",
+        "title": "Fictional Meridian Operations escalation handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "escalation",
+        "fact_value": "incident commander",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The escalation value in this edition is incident commander. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "escalation-v3",
+        "title": "Fictional Meridian Operations escalation handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "escalation",
+        "fact_value": "incident commander",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The escalation value in this edition is incident commander. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "postmortem-due-v1",
+        "title": "Fictional Meridian Operations postmortem-due handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "postmortem-due",
+        "fact_value": "10 business days",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The postmortem-due value in this edition is 10 business days. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "postmortem-due-v2",
+        "title": "Fictional Meridian Operations postmortem-due handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "postmortem-due",
+        "fact_value": "7 business days",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The postmortem-due value in this edition is 7 business days. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "postmortem-due-v3",
+        "title": "Fictional Meridian Operations postmortem-due handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "postmortem-due",
+        "fact_value": "5 business days",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The postmortem-due value in this edition is 5 business days. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "retention-v1",
+        "title": "Fictional Meridian Operations retention handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "retention",
+        "fact_value": "30 days",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The retention value in this edition is 30 days. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "retention-v2",
+        "title": "Fictional Meridian Operations retention handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "retention",
+        "fact_value": "60 days",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The retention value in this edition is 60 days. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "retention-v3",
+        "title": "Fictional Meridian Operations retention handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "retention",
+        "fact_value": "90 days",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The retention value in this edition is 90 days. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "change-window-v1",
+        "title": "Fictional Meridian Operations change-window handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "change-window",
+        "fact_value": "Tuesday 02:00 UTC",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The change-window value in this edition is Tuesday 02:00 UTC. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "change-window-v2",
+        "title": "Fictional Meridian Operations change-window handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "change-window",
+        "fact_value": "Wednesday 03:00 UTC",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The change-window value in this edition is Wednesday 03:00 UTC. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "change-window-v3",
+        "title": "Fictional Meridian Operations change-window handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "change-window",
+        "fact_value": "Thursday 02:00 UTC",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The change-window value in this edition is Thursday 02:00 UTC. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "review-cadence-v1",
+        "title": "Fictional Meridian Operations review-cadence handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "review-cadence",
+        "fact_value": "quarterly",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The review-cadence value in this edition is quarterly. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "review-cadence-v2",
+        "title": "Fictional Meridian Operations review-cadence handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "review-cadence",
+        "fact_value": "monthly",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The review-cadence value in this edition is monthly. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "review-cadence-v3",
+        "title": "Fictional Meridian Operations review-cadence handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "review-cadence",
+        "fact_value": "monthly",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The review-cadence value in this edition is monthly. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "restore-exercise-v1",
+        "title": "Fictional Meridian Operations restore-exercise handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "restore-exercise",
+        "fact_value": "annually",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The restore-exercise value in this edition is annually. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "restore-exercise-v2",
+        "title": "Fictional Meridian Operations restore-exercise handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "restore-exercise",
+        "fact_value": "twice yearly",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The restore-exercise value in this edition is twice yearly. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "restore-exercise-v3",
+        "title": "Fictional Meridian Operations restore-exercise handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "restore-exercise",
+        "fact_value": "quarterly",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The restore-exercise value in this edition is quarterly. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "handoff-v1",
+        "title": "Fictional Meridian Operations handoff handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "handoff",
+        "fact_value": "email note",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The handoff value in this edition is email note. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "handoff-v2",
+        "title": "Fictional Meridian Operations handoff handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "handoff",
+        "fact_value": "shift journal",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The handoff value in this edition is shift journal. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "handoff-v3",
+        "title": "Fictional Meridian Operations handoff handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "handoff",
+        "fact_value": "shift journal",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The handoff value in this edition is shift journal. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "status-update-v1",
+        "title": "Fictional Meridian Operations status-update handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "status-update",
+        "fact_value": "60 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The status-update value in this edition is 60 minutes. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "status-update-v2",
+        "title": "Fictional Meridian Operations status-update handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "status-update",
+        "fact_value": "30 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The status-update value in this edition is 30 minutes. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "status-update-v3",
+        "title": "Fictional Meridian Operations status-update handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "status-update",
+        "fact_value": "15 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The status-update value in this edition is 15 minutes. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "pager-coverage-v1",
+        "title": "Fictional Meridian Operations pager-coverage handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "pager-coverage",
+        "fact_value": "business hours",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The pager-coverage value in this edition is business hours. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "pager-coverage-v2",
+        "title": "Fictional Meridian Operations pager-coverage handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "pager-coverage",
+        "fact_value": "weekday shifts",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The pager-coverage value in this edition is weekday shifts. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "pager-coverage-v3",
+        "title": "Fictional Meridian Operations pager-coverage handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "pager-coverage",
+        "fact_value": "continuous rotation",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The pager-coverage value in this edition is continuous rotation. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "runbook-review-v1",
+        "title": "Fictional Meridian Operations runbook-review handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "runbook-review",
+        "fact_value": "12 months",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The runbook-review value in this edition is 12 months. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "runbook-review-v2",
+        "title": "Fictional Meridian Operations runbook-review handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "runbook-review",
+        "fact_value": "6 months",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The runbook-review value in this edition is 6 months. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "runbook-review-v3",
+        "title": "Fictional Meridian Operations runbook-review handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "runbook-review",
+        "fact_value": "3 months",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The runbook-review value in this edition is 3 months. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "audit-export-v1",
+        "title": "Fictional Meridian Operations audit-export handbook — archived2025",
+        "as_of": "2025-06-01",
+        "topic": "audit-export",
+        "fact_value": "CSV",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2025; recorded 2025-06-01. The audit-export value in this edition is CSV. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "audit-export-v2",
+        "title": "Fictional Meridian Operations audit-export handbook — archived2026-interim",
+        "as_of": "2026-03-01",
+        "topic": "audit-export",
+        "fact_value": "JSON Lines",
+        "text": "Meridian Operations synthetic handbook. Edition: archived2026-interim; recorded 2026-03-01. The audit-export value in this edition is JSON Lines. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      },
+      {
+        "source_id": "audit-export-v3",
+        "title": "Fictional Meridian Operations audit-export handbook — current2026",
+        "as_of": "2026-09-01",
+        "topic": "audit-export",
+        "fact_value": "JSON Lines",
+        "text": "Meridian Operations synthetic handbook. Edition: current2026; recorded 2026-09-01. The audit-export value in this edition is JSON Lines. This source is fictional controlled input, not a measured provider result. Archived editions remain source history; no winner is inferred from a document ID. The operations team uses this controlled pack for a fictional incident exercise."
+      }
+    ],
+    "focus_topics": [
+      "incident-ack",
+      "escalation"
+    ]
+  },
+  "task": "Research acknowledgement and escalation only. Preserve unrelated source history and all relevant conflicting editions.",
+  "provenance": "All documents and prior editions are fictional controlled source facts. No prior model, token, authentication, paid provider or publication observations are asserted."
+}

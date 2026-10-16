@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "case_id": "three-way-disagreement",
+  "profile": "boundary",
+  "description": "Every pair among three distinct tagged values conflicts",
+  "pack": {
+    "question": "Describe the three conflicting fictional acknowledgement values without hiding any pair.",
+    "sources": [
+      {
+        "source_id": "ack-a",
+        "title": "Fictional Meridian Operations incident-ack handbook — archived A",
+        "as_of": "2025-06-01",
+        "topic": "incident-ack",
+        "fact_value": "60 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: archived A; recorded 2025-06-01. The incident-ack value in this edition is 60 minutes. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "ack-b",
+        "title": "Fictional Meridian Operations incident-ack handbook — interim B",
+        "as_of": "2026-03-01",
+        "topic": "incident-ack",
+        "fact_value": "45 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: interim B; recorded 2026-03-01. The incident-ack value in this edition is 45 minutes. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "ack-c",
+        "title": "Fictional Meridian Operations incident-ack handbook — current C",
+        "as_of": "2026-09-01",
+        "topic": "incident-ack",
+        "fact_value": "30 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: current C; recorded 2026-09-01. The incident-ack value in this edition is 30 minutes. This source is fictional controlled input, not a measured provider result."
+      }
+    ],
+    "focus_topics": [
+      "incident-ack"
+    ]
+  },
+  "task": "Keep all distinct source disagreement pairs visible.",
+  "provenance": "All documents and prior editions are fictional controlled source facts. No prior model, token, authentication, paid provider or publication observations are asserted."
+}

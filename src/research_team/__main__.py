@@ -12,6 +12,12 @@ from pathlib import Path
 from .evidence import read_pack
 from .native import ROLES
 from .worker import run_team_async
+from .datasets import (
+    list_cases,
+    initialize_workspace,
+    inspect_workspace,
+    reset_workspace,
+)
 
 
 def save_report(path, value):
@@ -81,6 +87,33 @@ async def execute(pack, source, args):
 def main():
     # The CLI emits one JSON result; original native diagnostics remain in its private trace.
     logging.disable(logging.CRITICAL)
+    arguments = sys.argv[1:]
+    if arguments and arguments[0] in {"datasets", "init", "workspace", "reset"}:
+        parser = argparse.ArgumentParser(
+            description="Private model-free research workspaces"
+        )
+        commands = parser.add_subparsers(dest="command", required=True)
+        commands.add_parser("datasets")
+        initialize = commands.add_parser("init")
+        initialize.add_argument("--case", required=True)
+        initialize.add_argument("--directory", required=True, type=Path)
+        inspect = commands.add_parser("workspace")
+        inspect.add_argument("directory", type=Path)
+        reset = commands.add_parser("reset")
+        reset.add_argument("directory", type=Path)
+        reset.add_argument("--to", required=True, type=Path)
+        reset.add_argument("--instance", required=True)
+        args = parser.parse_args(arguments)
+        if args.command == "datasets":
+            result = list_cases()
+        elif args.command == "init":
+            result = initialize_workspace(args.case, args.directory)
+        elif args.command == "workspace":
+            result = inspect_workspace(args.directory)
+        else:
+            result = reset_workspace(args.directory, args.to, args.instance)
+        print(json.dumps(result, indent=2))
+        return 0
     parser = argparse.ArgumentParser(
         description="Controlled-source CrewAI research team"
     )
@@ -108,9 +141,9 @@ def main():
     return code
 
 
-if __name__ == "__main__":
+def cli():
     try:
-        sys.exit(main())
+        return main()
     except Exception as error:
         print(
             json.dumps(
@@ -122,4 +155,8 @@ if __name__ == "__main__":
             ),
             file=sys.stderr,
         )
-        sys.exit(1)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(cli())

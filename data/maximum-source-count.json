@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "case_id": "maximum-source-count",
+  "profile": "boundary",
+  "description": "Sixty-four sources with irrelevant background documents",
+  "pack": {
+    "question": "What is the fictional incident acknowledgement target?",
+    "sources": [
+      {
+        "source_id": "ack-current",
+        "title": "Fictional Meridian Operations incident-ack handbook — current",
+        "as_of": "2026-09-01",
+        "topic": "incident-ack",
+        "fact_value": "30 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: current; recorded 2026-09-01. The incident-ack value in this edition is 30 minutes. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "escalation-current",
+        "title": "Fictional Meridian Operations escalation handbook — current",
+        "as_of": "2026-09-01",
+        "topic": "escalation",
+        "fact_value": "incident commander",
+        "text": "Meridian Operations synthetic handbook. Edition: current; recorded 2026-09-01. The escalation value in this edition is incident commander. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-00",
+        "title": "Fictional Meridian Operations background-topic-00 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-00",
+        "fact_value": "controlled value 0",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-00 value in this edition is controlled value 0. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-01",
+        "title": "Fictional Meridian Operations background-topic-01 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-01",
+        "fact_value": "controlled value 1",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-01 value in this edition is controlled value 1. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-02",
+        "title": "Fictional Meridian Operations background-topic-02 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-02",
+        "fact_value": "controlled value 2",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-02 value in this edition is controlled value 2. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-03",
+        "title": "Fictional Meridian Operations background-topic-03 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-03",
+        "fact_value": "controlled value 3",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-03 value in this edition is controlled value 3. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-04",
+        "title": "Fictional Meridian Operations background-topic-04 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-04",
+        "fact_value": "controlled value 4",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-04 value in this edition is controlled value 4. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-05",
+        "title": "Fictional Meridian Operations background-topic-05 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-05",
+        "fact_value": "controlled value 5",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-05 value in this edition is controlled value 5. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-06",
+        "title": "Fictional Meridian Operations background-topic-06 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-06",
+        "fact_value": "controlled value 6",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-06 value in this edition is controlled value 6. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-07",
+        "title": "Fictional Meridian Operations background-topic-07 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-07",
+        "fact_value": "controlled value 7",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-07 value in this edition is controlled value 7. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-08",
+        "title": "Fictional Meridian Operations background-topic-08 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-08",
+        "fact_value": "controlled value 8",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-08 value in this edition is controlled value 8. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-09",
+        "title": "Fictional Meridian Operations background-topic-09 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-09",
+        "fact_value": "controlled value 9",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-09 value in this edition is controlled value 9. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-10",
+        "title": "Fictional Meridian Operations background-topic-10 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-10",
+        "fact_value": "controlled value 10",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-10 value in this edition is controlled value 10. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-11",
+        "title": "Fictional Meridian Operations background-topic-11 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-11",
+        "fact_value": "controlled value 11",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-11 value in this edition is controlled value 11. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-12",
+        "title": "Fictional Meridian Operations background-topic-12 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-12",
+        "fact_value": "controlled value 12",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-12 value in this edition is controlled value 12. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-13",
+        "title": "Fictional Meridian Operations background-topic-13 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-13",
+        "fact_value": "controlled value 13",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-13 value in this edition is controlled value 13. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-14",
+        "title": "Fictional Meridian Operations background-topic-14 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-14",
+        "fact_value": "controlled value 14",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-14 value in this edition is controlled value 14. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-15",
+        "title": "Fictional Meridian Operations background-topic-15 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-15",
+        "fact_value": "controlled value 15",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-15 value in this edition is controlled value 15. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-16",
+        "title": "Fictional Meridian Operations background-topic-16 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-16",
+        "fact_value": "controlled value 16",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-16 value in this edition is controlled value 16. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-17",
+        "title": "Fictional Meridian Operations background-topic-17 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-17",
+        "fact_value": "controlled value 17",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-17 value in this edition is controlled value 17. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-18",
+        "title": "Fictional Meridian Operations background-topic-18 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-18",
+        "fact_value": "controlled value 18",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-18 value in this edition is controlled value 18. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-19",
+        "title": "Fictional Meridian Operations background-topic-19 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-19",
+        "fact_value": "controlled value 19",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-19 value in this edition is controlled value 19. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-20",
+        "title": "Fictional Meridian Operations background-topic-20 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-20",
+        "fact_value": "controlled value 20",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-20 value in this edition is controlled value 20. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-21",
+        "title": "Fictional Meridian Operations background-topic-21 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-21",
+        "fact_value": "controlled value 21",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-21 value in this edition is controlled value 21. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-22",
+        "title": "Fictional Meridian Operations background-topic-22 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-22",
+        "fact_value": "controlled value 22",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-22 value in this edition is controlled value 22. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-23",
+        "title": "Fictional Meridian Operations background-topic-23 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-23",
+        "fact_value": "controlled value 23",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-23 value in this edition is controlled value 23. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-24",
+        "title": "Fictional Meridian Operations background-topic-24 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-24",
+        "fact_value": "controlled value 24",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-24 value in this edition is controlled value 24. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-25",
+        "title": "Fictional Meridian Operations background-topic-25 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-25",
+        "fact_value": "controlled value 25",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-25 value in this edition is controlled value 25. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-26",
+        "title": "Fictional Meridian Operations background-topic-26 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-26",
+        "fact_value": "controlled value 26",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-26 value in this edition is controlled value 26. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-27",
+        "title": "Fictional Meridian Operations background-topic-27 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-27",
+        "fact_value": "controlled value 27",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-27 value in this edition is controlled value 27. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-28",
+        "title": "Fictional Meridian Operations background-topic-28 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-28",
+        "fact_value": "controlled value 28",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-28 value in this edition is controlled value 28. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-29",
+        "title": "Fictional Meridian Operations background-topic-29 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-29",
+        "fact_value": "controlled value 29",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-29 value in this edition is controlled value 29. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-30",
+        "title": "Fictional Meridian Operations background-topic-30 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-30",
+        "fact_value": "controlled value 30",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-30 value in this edition is controlled value 30. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-31",
+        "title": "Fictional Meridian Operations background-topic-31 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-31",
+        "fact_value": "controlled value 31",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-31 value in this edition is controlled value 31. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-32",
+        "title": "Fictional Meridian Operations background-topic-32 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-32",
+        "fact_value": "controlled value 32",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-32 value in this edition is controlled value 32. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-33",
+        "title": "Fictional Meridian Operations background-topic-33 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-33",
+        "fact_value": "controlled value 33",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-33 value in this edition is controlled value 33. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-34",
+        "title": "Fictional Meridian Operations background-topic-34 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-34",
+        "fact_value": "controlled value 34",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-34 value in this edition is controlled value 34. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-35",
+        "title": "Fictional Meridian Operations background-topic-35 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-35",
+        "fact_value": "controlled value 35",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-35 value in this edition is controlled value 35. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-36",
+        "title": "Fictional Meridian Operations background-topic-36 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-36",
+        "fact_value": "controlled value 36",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-36 value in this edition is controlled value 36. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-37",
+        "title": "Fictional Meridian Operations background-topic-37 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-37",
+        "fact_value": "controlled value 37",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-37 value in this edition is controlled value 37. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-38",
+        "title": "Fictional Meridian Operations background-topic-38 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-38",
+        "fact_value": "controlled value 38",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-38 value in this edition is controlled value 38. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-39",
+        "title": "Fictional Meridian Operations background-topic-39 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-39",
+        "fact_value": "controlled value 39",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-39 value in this edition is controlled value 39. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-40",
+        "title": "Fictional Meridian Operations background-topic-40 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-40",
+        "fact_value": "controlled value 40",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-40 value in this edition is controlled value 40. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-41",
+        "title": "Fictional Meridian Operations background-topic-41 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-41",
+        "fact_value": "controlled value 41",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-41 value in this edition is controlled value 41. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-42",
+        "title": "Fictional Meridian Operations background-topic-42 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-42",
+        "fact_value": "controlled value 42",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-42 value in this edition is controlled value 42. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-43",
+        "title": "Fictional Meridian Operations background-topic-43 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-43",
+        "fact_value": "controlled value 43",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-43 value in this edition is controlled value 43. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-44",
+        "title": "Fictional Meridian Operations background-topic-44 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-44",
+        "fact_value": "controlled value 44",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-44 value in this edition is controlled value 44. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-45",
+        "title": "Fictional Meridian Operations background-topic-45 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-45",
+        "fact_value": "controlled value 45",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-45 value in this edition is controlled value 45. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-46",
+        "title": "Fictional Meridian Operations background-topic-46 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-46",
+        "fact_value": "controlled value 46",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-46 value in this edition is controlled value 46. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-47",
+        "title": "Fictional Meridian Operations background-topic-47 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-47",
+        "fact_value": "controlled value 47",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-47 value in this edition is controlled value 47. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-48",
+        "title": "Fictional Meridian Operations background-topic-48 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-48",
+        "fact_value": "controlled value 48",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-48 value in this edition is controlled value 48. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-49",
+        "title": "Fictional Meridian Operations background-topic-49 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-49",
+        "fact_value": "controlled value 49",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-49 value in this edition is controlled value 49. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-50",
+        "title": "Fictional Meridian Operations background-topic-50 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-50",
+        "fact_value": "controlled value 50",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-50 value in this edition is controlled value 50. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-51",
+        "title": "Fictional Meridian Operations background-topic-51 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-51",
+        "fact_value": "controlled value 51",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-51 value in this edition is controlled value 51. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-52",
+        "title": "Fictional Meridian Operations background-topic-52 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-52",
+        "fact_value": "controlled value 52",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-52 value in this edition is controlled value 52. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-53",
+        "title": "Fictional Meridian Operations background-topic-53 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-53",
+        "fact_value": "controlled value 53",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-53 value in this edition is controlled value 53. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-54",
+        "title": "Fictional Meridian Operations background-topic-54 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-54",
+        "fact_value": "controlled value 54",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-54 value in this edition is controlled value 54. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-55",
+        "title": "Fictional Meridian Operations background-topic-55 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-55",
+        "fact_value": "controlled value 55",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-55 value in this edition is controlled value 55. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-56",
+        "title": "Fictional Meridian Operations background-topic-56 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-56",
+        "fact_value": "controlled value 56",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-56 value in this edition is controlled value 56. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-57",
+        "title": "Fictional Meridian Operations background-topic-57 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-57",
+        "fact_value": "controlled value 57",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-57 value in this edition is controlled value 57. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-58",
+        "title": "Fictional Meridian Operations background-topic-58 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-58",
+        "fact_value": "controlled value 58",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-58 value in this edition is controlled value 58. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-59",
+        "title": "Fictional Meridian Operations background-topic-59 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-59",
+        "fact_value": "controlled value 59",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-59 value in this edition is controlled value 59. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-60",
+        "title": "Fictional Meridian Operations background-topic-60 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-60",
+        "fact_value": "controlled value 60",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-60 value in this edition is controlled value 60. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "background-61",
+        "title": "Fictional Meridian Operations background-topic-61 handbook — unrelated approved note",
+        "as_of": "2026-09-01",
+        "topic": "background-topic-61",
+        "fact_value": "controlled value 61",
+        "text": "Meridian Operations synthetic handbook. Edition: unrelated approved note; recorded 2026-09-01. The background-topic-61 value in this edition is controlled value 61. This source is fictional controlled input, not a measured provider result."
+      }
+    ],
+    "focus_topics": [
+      "incident-ack"
+    ]
+  },
+  "task": "Answer only the requested topic without borrowing unrelated source context.",
+  "provenance": "All documents and prior editions are fictional controlled source facts. No prior model, token, authentication, paid provider or publication observations are asserted."
+}

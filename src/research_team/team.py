@@ -31,6 +31,15 @@ def build_crew(
     source_json = json.dumps(
         [source.model_dump() for source in pack.sources], sort_keys=True
     )
+    focus_instruction = (
+        "Requested topics: "
+        + (
+            ", ".join(pack.focus_topics)
+            if pack.focus_topics is not None
+            else "all supplied topics"
+        )
+        + ". Use only these topics for claims/conflicts; explicitly retain unavailable topic evidence as gaps."
+    )
     researcher = Agent(
         role="Controlled-source researcher",
         goal="Find relevant claims in the supplied source pack",
@@ -93,6 +102,8 @@ def build_crew(
         agent=writer,
         context=[research, check],
     )
+    for task in (research, check, write):
+        task.description += "\n" + focus_instruction
     if strict_handoffs:
         research.description += " Return a ResearchNotes JSON object: claims (text, source_id, exact_quote) and gaps (strings). Do not answer as a final brief."
         check.description += " Return a CheckReport JSON object: reviews (claim_index zero-based, disposition supported/unsupported, reason), conflicts (exactly two source_ids, explanation), gaps (strings). Classify every candidate exactly once. Preserve research gaps."
@@ -100,27 +111,29 @@ def build_crew(
     for role, task in (("researcher", research), ("checker", check), ("writer", write)):
         if callbacks:
             task.callback = callbacks[role]
-    crew_type = Crew
-    if task_store_path is not None:
-        from pydantic import PrivateAttr
-        from crewai.utilities.task_output_storage_handler import (
-            TaskOutputStorageHandler,
-        )
-        from crewai.memory.storage.kickoff_task_outputs_storage import (
-            KickoffTaskOutputsSQLiteStorage,
-        )
+    from pathlib import Path
+    from tempfile import TemporaryDirectory
+    from pydantic import PrivateAttr
+    from crewai.utilities.task_output_storage_handler import TaskOutputStorageHandler
+    from crewai.memory.storage.kickoff_task_outputs_storage import (
+        KickoffTaskOutputsSQLiteStorage,
+    )
 
-        class OwnedHandler(TaskOutputStorageHandler):
-            def __init__(self):
-                from pathlib import Path
+    temporary = None
+    if task_store_path is None:
+        temporary = TemporaryDirectory(prefix="research-team-crew-")
+        task_store_path = Path(temporary.name) / "crew-tasks.db"
 
-                Path(task_store_path).touch(mode=0o600, exist_ok=False)
-                self.storage = KickoffTaskOutputsSQLiteStorage(str(task_store_path))
+    class OwnedHandler(TaskOutputStorageHandler):
+        def __init__(self):
+            Path(task_store_path).touch(mode=0o600, exist_ok=False)
+            self.storage = KickoffTaskOutputsSQLiteStorage(str(task_store_path))
 
-        class LocalCrew(Crew):
-            _task_output_handler = PrivateAttr(default_factory=OwnedHandler)
+    class LocalCrew(Crew):
+        _task_output_handler = PrivateAttr(default_factory=OwnedHandler)
+        _owned_task_directory = PrivateAttr(default_factory=lambda: temporary)
 
-        crew_type = LocalCrew
+    crew_type = LocalCrew
     return crew_type(
         agents=[researcher, checker, writer],
         tasks=[research, check, write],
@@ -162,6 +175,13 @@ def grade_brief(pack: SourcePack, brief: ResearchBrief) -> dict:
     brief = ResearchBrief.model_validate(brief)
     sources = {source.source_id: source for source in pack.sources}
     issues = []
+    focus = (
+        set(pack.focus_topics)
+        if pack.focus_topics is not None
+        else {source.topic for source in pack.sources}
+    )
+    for topic in sorted(focus - {source.topic for source in pack.sources}):
+        issues.append("no supplied sources for requested topic: " + topic)
     if len(sources) != len(pack.sources):
         issues.append("source IDs are not unique")
     if brief.question != pack.question:
@@ -172,6 +192,8 @@ def grade_brief(pack: SourcePack, brief: ResearchBrief) -> dict:
         source = sources.get(claim.source_id)
         if source is None:
             issues.append(f"claim {index} cites unknown source {claim.source_id}")
+        elif source.topic not in focus:
+            issues.append(f"claim {index} cites a source outside requested topics")
         elif claim.exact_quote not in source.text:
             issues.append(
                 f"claim {index} quote is absent from source {claim.source_id}"
@@ -179,7 +201,8 @@ def grade_brief(pack: SourcePack, brief: ResearchBrief) -> dict:
     required_conflicts = set()
     by_topic: dict[str, list] = {}
     for source in pack.sources:
-        by_topic.setdefault(source.topic, []).append(source)
+        if source.topic in focus:
+            by_topic.setdefault(source.topic, []).append(source)
     for topic_sources in by_topic.values():
         for index, left in enumerate(topic_sources):
             for right in topic_sources[index + 1 :]:

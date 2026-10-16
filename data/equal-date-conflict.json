@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "case_id": "equal-date-conflict",
+  "profile": "ambiguous",
+  "description": "Two same-date approved regional editions disagree",
+  "pack": {
+    "question": "What acknowledgement target is supported when two same-date editions disagree?",
+    "sources": [
+      {
+        "source_id": "ack-edition-a",
+        "title": "Fictional Meridian Operations incident-ack handbook — approved regional edition A",
+        "as_of": "2026-09-01",
+        "topic": "incident-ack",
+        "fact_value": "30 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: approved regional edition A; recorded 2026-09-01. The incident-ack value in this edition is 30 minutes. This source is fictional controlled input, not a measured provider result."
+      },
+      {
+        "source_id": "ack-edition-b",
+        "title": "Fictional Meridian Operations incident-ack handbook — approved regional edition B",
+        "as_of": "2026-09-01",
+        "topic": "incident-ack",
+        "fact_value": "45 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: approved regional edition B; recorded 2026-09-01. The incident-ack value in this edition is 45 minutes. This source is fictional controlled input, not a measured provider result."
+      }
+    ],
+    "focus_topics": [
+      "incident-ack"
+    ]
+  },
+  "task": "Report both values and the unresolved regional applicability; do not invent a version winner.",
+  "provenance": "All documents and prior editions are fictional controlled source facts. No prior model, token, authentication, paid provider or publication observations are asserted."
+}

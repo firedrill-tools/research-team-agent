@@ -93,7 +93,10 @@ async def run_team_async(
                     ),
                 )
                 issues = [
-                    x for x in gate["issues"] if x != "brief contains no cited claims"
+                    x
+                    for x in gate["issues"]
+                    if x != "brief contains no cited claims"
+                    and not x.startswith("no supplied sources for requested topic:")
                 ]
                 if notes.gaps and not parsed.gaps:
                     issues.append("checker dropped research uncertainty")

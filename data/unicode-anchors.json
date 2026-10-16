@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "case_id": "unicode-anchors",
+  "profile": "boundary",
+  "description": "Accented, curly-quoted and narrow-space source anchors",
+  "pack": {
+    "question": "What exact fictional approval threshold is written in the supplied European handbook?",
+    "sources": [
+      {
+        "source_id": "approvals-fr",
+        "title": "Fictional Meridian Operations approval-threshold handbook — current",
+        "as_of": "2026-09-01",
+        "topic": "approval-threshold",
+        "fact_value": "€1 250",
+        "text": "Meridian Operations synthetic handbook. Edition: current; recorded 2026-09-01. The approval-threshold value in this edition is €1 250. This source is fictional controlled input, not a measured provider result. Exact wording: “Révision avant approbation”. Preserve accents, curly quotes and the narrow no-break space; do not normalize quote anchors."
+      }
+    ],
+    "focus_topics": [
+      "approval-threshold"
+    ]
+  },
+  "task": "Preserve exact original quote bytes without normalization.",
+  "provenance": "All documents and prior editions are fictional controlled source facts. No prior model, token, authentication, paid provider or publication observations are asserted."
+}

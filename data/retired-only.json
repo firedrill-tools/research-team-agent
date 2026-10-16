@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "dataset": "controlled-research-cases",
+  "version": "1.0.0",
+  "case_id": "retired-only",
+  "profile": "ambiguous",
+  "description": "Only a superseded historical edition is supplied",
+  "pack": {
+    "question": "What historical acknowledgement guidance is present, and what remains unavailable?",
+    "sources": [
+      {
+        "source_id": "ack-retired",
+        "title": "Fictional Meridian Operations incident-ack handbook — retired2025",
+        "as_of": "2025-06-01",
+        "topic": "incident-ack",
+        "fact_value": "60 minutes",
+        "text": "Meridian Operations synthetic handbook. Edition: retired2025; recorded 2025-06-01. The incident-ack value in this edition is 60 minutes. This source is fictional controlled input, not a measured provider result. This edition is superseded. The current replacement is not supplied. Do not describe this historical value as a verified current target."
+      }
+    ],
+    "focus_topics": [
+      "incident-ack"
+    ]
+  },
+  "task": "Summarize historical evidence with explicit limits; the current replacement is unavailable.",
+  "provenance": "All documents and prior editions are fictional controlled source facts. No prior model, token, authentication, paid provider or publication observations are asserted."
+}

@@ -28,7 +28,7 @@ Explore related applications in the [Firedrill example catalog](https://github.c
 
 16 local checks now cover the original three-role stub kickoff and strict bounded source/brief contracts, actual calendar dates, source uniqueness/tagged value anchors, nonblank text, duplicate/nonfinite role JSON and independent citation/conflict/handoff gates. Extra cross-topic/duplicate conflicts cannot be supported. A checked handoff must classify every candidate exactly once; writer claims must come from supported candidates, disagreements must match the checker and checker gaps remain explicit. These are structural checks; semantic entailment is still not established.
 
-At the original contract checkpoint native completion work was still active. An actual three-role native OpenAI/CrewAI loopback probe at the original baseline accepted three finish_reason length responses and published a supported brief. The native checkpoint below now blocks that defect. Coherent datasets/private workspaces and fresh locked distributions remain in [PLAN.md](PLAN.md). Live provider/billing/Firedrill/publication gates stay parked; no paid model has been used.
+At the original contract checkpoint native completion work was still active. An actual three-role native OpenAI/CrewAI loopback probe at the original baseline accepted three finish_reason length responses and published a supported brief. The native checkpoint below now blocks that defect. Data and distribution qualification is documented below. Live provider/billing/Firedrill/publication gates stay parked; no paid model has been used.
 
 
 ## Native role checkpoint
@@ -47,4 +47,50 @@ Each run writes a0700 directory/0600 atomic flushed trace before credentials/nat
 
 Tests include actual normal CLI over local HTTP for a mixed team, original length rejection, explicit auth/proxy policy and all three signals. These are controlled synthetic calls, never paid providers. The1MiB caps bound retained decoded response/request evidence, not upstream wire/peak heap. Synchronous CrewAI/file/SQLite/flush work and cleanup are outside a hard whole-run wall promise; the bridge does not establish hostile-code/process containment. CrewAI tracing is explicitly off; run the CLI/tests with the documented telemetry environment flags before library initialization. Caller-injected BaseLLM remains a separately labeled caller-owned stub path.
 
-Versioned rich cases/private model-free workspaces and fresh locked distribution remain active. Live model availability, paid semantic/billing review, qualified new Firedrill and publication/license stay parked. See [COMPATIBILITY.md](COMPATIBILITY.md) and [PLAN.md](PLAN.md).
+Versioned cases and fresh distribution qualification are documented below. Live model availability, paid semantic/billing review, qualified new Firedrill and publication/license stay parked. See [COMPATIBILITY.md](COMPATIBILITY.md) and [PLAN.md](PLAN.md).
+
+
+## Versioned controlled source packs
+
+89 checks pass locally. `controlled-research-cases`1.0.0 has twelve source-hash-bound cases/four profiles. All documents/editions are fictional source facts, with no invented prior model/usage/authentication/paid provider observations. Task and dataset identity remain separate from model source context.
+
+| Profile | Cases |
+| --- | --- |
+| Starter | incident-target, consistent-guidance, corroborating-sources |
+| Busy | busy-handbooks:36 coherent editions across12 topics, with two topics requested |
+| Ambiguous | missing-topic, equal-date-conflict, unapproved-draft, retired-only |
+| Boundary | hostile-import, three-way-disagreement, unicode-anchors, maximum-source-count (64 sources) |
+
+A pack may specify `focus_topics` (up to8 unique IDs). Claims and conflict pairs must stay within that explicit scope; unrelated documents remain supplied context. A requested topic without sources produces needs_review. When omitted, all supplied topics remain in scope for backward compatibility. This does not infer topical relevance or semantic entailment from the natural-language question. Date, draft, archived and Unicode source qualifications remain original text for the model and human to interpret.
+
+List, initialize and inspect without provider keys or model calls:
+
+```sh
+OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked research-team datasets
+OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked research-team init --case busy-handbooks --directory /tmp/research-busy
+OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked research-team workspace /tmp/research-busy
+```
+
+Initialization validates a source-pinned index and case hashes, creates an exclusive0700 directory with0600 `pack.json`, `workspace.json` and `TASK.md`, and preserves existing paths/files/symlinks. Readback validates current source and reports its exact hash and whether it matches the original seed. Valid human edits are preserved and clearly differ from the seed; malformed/missing source and changed seed identity are refused without repair. Native execution binds the actual selected source snapshot, never an assumed unchanged seed.
+
+Reset materializes the original case into a fresh private destination after checking the current workspace instance, preserving old source/work/evidence:
+
+```sh
+OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked research-team reset /tmp/research-busy --to /tmp/research-busy-fresh --instance CURRENT_INSTANCE_UUID
+```
+
+To investigate an initialized pack with configured roles/keys, use `research-team /tmp/research-busy/pack.json --output-root /tmp/research-runs`. Model work remains explicit and separate from setup. Every one of the twelve packs is qualified through the actual native three-role sequence with controlled HTTP responses. Busy retains its unrelated history while the structural gate limits answer authority to its two requested topics. Hostile text placement and controlled responses do not prove live model obedience or semantic quality.
+
+All crew builds, including the caller-injected stub path, now use private task storage. This avoids constructing or resetting CrewAI's shared latest-kickoff database; independent private crews cannot erase each other's records. Native task storage stays in the private run; a direct caller's crew keeps a private temporary directory for its own lifetime.
+
+## Distribution qualification
+
+```sh
+uv run --locked python scripts/build_datasets.py --check
+uv build
+OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked python scripts/check_distribution.py
+```
+
+The wheel includes all thirteen JSON files; the sdist includes source/data/original fixture/tests/helpers/scripts/docs/CI/lockfiles. A separate deterministic complete source archive contains an exact per-file SHA256/size/mode manifest and is generated without Git or installed caches. Fresh locked wheel/sdist/complete-source environments outside checkout qualify console/module CLI, all twelve private cases/reset, real installed three-role SDK/CLI over owned HTTP, exclusive report publication and missing-key failure receipts. The entire89-check suite runs from the complete archived source and preserves every original archived file hash. Repeated archive bytes agree. CI uploads distributions plus qualification.json; no public release/license choice is implied.
+
+Independent application implementation is complete; exact final Linux/data/distribution evidence is recorded in the catalog. Live provider/semantic/billing review, qualified new Firedrill and publication/license remain parked. [PLAN.md](PLAN.md) retains the portfolio handoff.

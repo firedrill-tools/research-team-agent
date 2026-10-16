@@ -45,9 +45,14 @@ class Source(Contract):
 class SourcePack(Contract):
     question: str = Field(min_length=1, max_length=2000)
     sources: list[Source] = Field(min_length=1, max_length=64)
+    focus_topics: list[ID] | None = Field(default=None, min_length=1, max_length=8)
 
     @model_validator(mode="after")
     def coherent(self):
+        if self.focus_topics is not None and len(set(self.focus_topics)) != len(
+            self.focus_topics
+        ):
+            raise ValueError("requested focus topics must be unique")
         if len({source.source_id for source in self.sources}) != len(self.sources):
             raise ValueError("source IDs must be unique")
         if len(self.model_dump_json().encode()) > 1048576:

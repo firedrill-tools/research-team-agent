@@ -8,3 +8,6 @@ __pycache__/
 .runs/
 *.db
 *.db-*
+
+dist/
+*.egg-info/
