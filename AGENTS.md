@@ -10,3 +10,7 @@ Native56 checkpoint: actual pinned SDKs support explicit per-role OpenAI/Anthrop
 
 
 Scoped data/distribution: optional focus_topics limits structural claim/conflict authority; absent focus preserves all-topic legacy behavior, and missing requested source cannot be supported. Preserve unrelated source history without promoting it into answer authority. controlled-research-cases1.0.0 has12 hash-bound packs/four profiles,36-edition busy source and64-source boundary. Preserve original fictional source editions/qualifiers and unavailable prior measurements. Task/fixture identity remains outside prompts. Exclusive private key-free initialization/readback/reset preserves collisions and old work; valid human edits are distinguishable from seed, malformed/missing/current source is never repaired. Every crew build (including caller stubs) owns private task storage and must never construct/reset shared latest-kickoff records.89 local checks and fresh locked wheel/sdist/complete source gates are required; qualify exact Linux/artifact hash before recording completion. External live/new Firedrill/publication gates stay parked.
+
+## Current Firedrill integration
+
+Released CLI/SDK 2.2.2, current command invocation, remote operator MCP and recovery are documented in [firedrill/README.md](firedrill/README.md). Offline checks preserve actual private source/native-key behavior and explicit model/budget selection. Authenticated persisted runs and live quality/cost remain separate parked gates.

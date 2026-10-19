@@ -94,3 +94,7 @@ OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked python scr
 The wheel includes all thirteen JSON files; the sdist includes source/data/original fixture/tests/helpers/scripts/docs/CI/lockfiles. A separate deterministic complete source archive contains an exact per-file SHA256/size/mode manifest and is generated without Git or installed caches. Fresh locked wheel/sdist/complete-source environments outside checkout qualify console/module CLI, all twelve private cases/reset, real installed three-role SDK/CLI over owned HTTP, exclusive report publication and missing-key failure receipts. The entire89-check suite runs from the complete archived source and preserves every original archived file hash. Repeated archive bytes agree. CI uploads distributions plus qualification.json; no public release/license choice is implied.
 
 Independent application implementation is complete; exact final Linux/data/distribution evidence is recorded in the catalog. Live provider/semantic/billing review, qualified new Firedrill and publication/license remain parked. [PLAN.md](PLAN.md) retains the portfolio handoff.
+
+## Current Firedrill integration
+
+Released CLI/SDK 2.2.2, current command invocation, remote operator MCP and recovery are documented in [firedrill/README.md](firedrill/README.md). Offline checks preserve actual private source/native-key behavior and explicit model/budget selection. Authenticated persisted runs and live quality/cost remain separate parked gates.

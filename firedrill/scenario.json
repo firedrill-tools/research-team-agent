@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "2026-10-14",
+  "name": "research-team-agent \u2014 actual bounded native application",
+  "target": {
+    "kind": "command",
+    "argv": [
+      "node",
+      "firedrill/target.mjs"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "incident-target",
+      "name": "incident-target run",
+      "input": {
+        "caseId": "incident-target",
+        "action": "run",
+        "models": {
+          "researcher": "openai/gpt-4.1",
+          "checker": "openai/gpt-4.1",
+          "writer": "openai/gpt-4.1"
+        }
+      }
+    },
+    {
+      "id": "missing-topic",
+      "name": "missing-topic run",
+      "input": {
+        "caseId": "missing-topic",
+        "action": "run",
+        "models": {
+          "researcher": "openai/gpt-4.1",
+          "checker": "openai/gpt-4.1",
+          "writer": "openai/gpt-4.1"
+        }
+      }
+    },
+    {
+      "id": "busy-handbooks",
+      "name": "busy-handbooks inspect",
+      "input": {
+        "caseId": "busy-handbooks",
+        "action": "inspect",
+        "models": {
+          "researcher": "openai/gpt-4.1",
+          "checker": "openai/gpt-4.1",
+          "writer": "openai/gpt-4.1"
+        }
+      }
+    }
+  ],
+  "repetitions": 1,
+  "concurrency": 1,
+  "limits": {
+    "timeoutMs": 240000,
+    "maxRuns": 3,
+    "maxOutputBytes": 4194304
+  }
+}
