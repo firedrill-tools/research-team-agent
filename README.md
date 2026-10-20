@@ -1,6 +1,8 @@
-# Research team agent
+# Multi-agent research team with CrewAI
 
 A three-role [CrewAI](https://docs.crewai.com/en/concepts/crews) team researches a controlled local source pack. The researcher extracts claims, the checker challenges evidence and notes conflicting versions, and the writer prepares a JSON brief. An independent gate checks source IDs, exact quote anchors and conflicts tagged in the pack before marking a brief supported.
+
+Simulate this CrewAI AI agent with [Firedrill](https://firedrill.run/), a simulation platform for AI agents. Start with the [Firedrill setup and simulation guide](firedrill/README.md); your coding agent can operate it while this application's runner stays in your repository or CI.
 
 ## Run
 
@@ -19,7 +21,7 @@ OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked python -m 
 
 The example pack has an archived 60-minute and current 30-minute incident acknowledgement target. A supported brief must call out that conflict. Every claim includes a source ID and an exact quote from the source text. Bad citations, missing conflicts, or no claims produce `needs_review` with issues in the saved report. The output file and source pack are local; the example does not browse or modify external systems.
 
-The gate does not establish semantic entailment of a claim from its quote; the checker and a human reviewer still need to assess that. Local tests invoke the actual sequential CrewAI tasks with a stub LLM and test the independent gate. They do not prove a live model run. A real run requires provider credentials, model availability and measured output. Firedrill integration awaits qualification of its new released interface. Dependencies are locked in `uv.lock`.
+The gate does not establish semantic entailment of a claim from its quote; the checker and a human reviewer still need to assess that. Local tests invoke the actual sequential CrewAI tasks with a stub LLM and test the independent gate. They do not prove a live model run. A real run requires provider credentials, model availability and measured output. A checked-in Firedrill adapter uses the released CLI/SDK; authenticated persisted-run verification remains separate. Dependencies are locked in `uv.lock`.
 
 Explore related applications in the [Firedrill example catalog](https://github.com/firedrill-tools/firedrill-example-catalog). Product and setup references: [Firedrill](https://firedrill.run/) and the [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release; this repository records its current integration limits above.
 
@@ -47,7 +49,7 @@ Each run writes a0700 directory/0600 atomic flushed trace before credentials/nat
 
 Tests include actual normal CLI over local HTTP for a mixed team, original length rejection, explicit auth/proxy policy and all three signals. These are controlled synthetic calls, never paid providers. The1MiB caps bound retained decoded response/request evidence, not upstream wire/peak heap. Synchronous CrewAI/file/SQLite/flush work and cleanup are outside a hard whole-run wall promise; the bridge does not establish hostile-code/process containment. CrewAI tracing is explicitly off; run the CLI/tests with the documented telemetry environment flags before library initialization. Caller-injected BaseLLM remains a separately labeled caller-owned stub path.
 
-Versioned cases and fresh distribution qualification are documented below. Live model availability, paid semantic/billing review, qualified new Firedrill and publication/license stay parked. See [COMPATIBILITY.md](COMPATIBILITY.md) and [PLAN.md](PLAN.md).
+Versioned cases and fresh distribution qualification are documented below. Live model availability, paid semantic/billing review, authenticated Firedrill persistence verification and publication/license stay parked. See [COMPATIBILITY.md](COMPATIBILITY.md) and [PLAN.md](PLAN.md).
 
 
 ## Versioned controlled source packs
@@ -93,7 +95,7 @@ OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked python scr
 
 The wheel includes all thirteen JSON files; the sdist includes source/data/original fixture/tests/helpers/scripts/docs/CI/lockfiles. A separate deterministic complete source archive contains an exact per-file SHA256/size/mode manifest and is generated without Git or installed caches. Fresh locked wheel/sdist/complete-source environments outside checkout qualify console/module CLI, all twelve private cases/reset, real installed three-role SDK/CLI over owned HTTP, exclusive report publication and missing-key failure receipts. The entire89-check suite runs from the complete archived source and preserves every original archived file hash. Repeated archive bytes agree. CI uploads distributions plus qualification.json; no public release/license choice is implied.
 
-Independent application implementation is complete; exact final Linux/data/distribution evidence is recorded in the catalog. Live provider/semantic/billing review, qualified new Firedrill and publication/license remain parked. [PLAN.md](PLAN.md) retains the portfolio handoff.
+Independent application implementation is complete; exact final Linux/data/distribution evidence is recorded in the catalog. Live provider/semantic/billing review, authenticated Firedrill persistence verification and publication/license remain parked. [PLAN.md](PLAN.md) retains the portfolio handoff.
 
 ## Current Firedrill integration
 
