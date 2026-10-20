@@ -4,6 +4,8 @@ A three-role [CrewAI](https://docs.crewai.com/en/concepts/crews) team researches
 
 Simulate this CrewAI AI agent with [Firedrill](https://firedrill.run/), a simulation platform for AI agents. Start with the [Firedrill setup and simulation guide](firedrill/README.md); your coding agent can operate it while this application's runner stays in your repository or CI.
 
+This example repository is publicly viewable. A project license has not been selected.
+
 ## Run
 
 Requires Python 3.12+ and `uv`:
@@ -30,7 +32,7 @@ Explore related applications in the [Firedrill example catalog](https://github.c
 
 16 local checks now cover the original three-role stub kickoff and strict bounded source/brief contracts, actual calendar dates, source uniqueness/tagged value anchors, nonblank text, duplicate/nonfinite role JSON and independent citation/conflict/handoff gates. Extra cross-topic/duplicate conflicts cannot be supported. A checked handoff must classify every candidate exactly once; writer claims must come from supported candidates, disagreements must match the checker and checker gaps remain explicit. These are structural checks; semantic entailment is still not established.
 
-At the original contract checkpoint native completion work was still active. An actual three-role native OpenAI/CrewAI loopback probe at the original baseline accepted three finish_reason length responses and published a supported brief. The native checkpoint below now blocks that defect. Data and distribution qualification is documented below. Live provider/billing/Firedrill/publication gates stay parked; no paid model has been used.
+At the original contract checkpoint native completion work was still active. An actual three-role native OpenAI/CrewAI loopback probe at the original baseline accepted three finish_reason length responses and published a supported brief. The native checkpoint below now blocks that defect. Data and distribution qualification is documented below. At that checkpoint, live provider/billing/Firedrill/publication gates remained parked; no paid model has been used.
 
 
 ## Native role checkpoint
@@ -49,7 +51,7 @@ Each run writes a0700 directory/0600 atomic flushed trace before credentials/nat
 
 Tests include actual normal CLI over local HTTP for a mixed team, original length rejection, explicit auth/proxy policy and all three signals. These are controlled synthetic calls, never paid providers. The1MiB caps bound retained decoded response/request evidence, not upstream wire/peak heap. Synchronous CrewAI/file/SQLite/flush work and cleanup are outside a hard whole-run wall promise; the bridge does not establish hostile-code/process containment. CrewAI tracing is explicitly off; run the CLI/tests with the documented telemetry environment flags before library initialization. Caller-injected BaseLLM remains a separately labeled caller-owned stub path.
 
-Versioned cases and fresh distribution qualification are documented below. Live model availability, paid semantic/billing review, authenticated Firedrill persistence verification and publication/license stay parked. See [COMPATIBILITY.md](COMPATIBILITY.md) and [PLAN.md](PLAN.md).
+Versioned cases and fresh distribution qualification are documented below. Live model availability, paid semantic/billing review, authenticated Firedrill persistence verification and license stay parked. See [COMPATIBILITY.md](COMPATIBILITY.md) and [PLAN.md](PLAN.md).
 
 
 ## Versioned controlled source packs
@@ -93,9 +95,9 @@ uv build
 OTEL_SDK_DISABLED=true CREWAI_TELEMETRY_DISABLED=true uv run --locked python scripts/check_distribution.py
 ```
 
-The wheel includes all thirteen JSON files; the sdist includes source/data/original fixture/tests/helpers/scripts/docs/CI/lockfiles. A separate deterministic complete source archive contains an exact per-file SHA256/size/mode manifest and is generated without Git or installed caches. Fresh locked wheel/sdist/complete-source environments outside checkout qualify console/module CLI, all twelve private cases/reset, real installed three-role SDK/CLI over owned HTTP, exclusive report publication and missing-key failure receipts. The entire89-check suite runs from the complete archived source and preserves every original archived file hash. Repeated archive bytes agree. CI uploads distributions plus qualification.json; no public release/license choice is implied.
+The wheel includes all thirteen JSON files; the sdist includes source/data/original fixture/tests/helpers/scripts/docs/CI/lockfiles. A separate deterministic complete source archive contains an exact per-file SHA256/size/mode manifest and is generated without Git or installed caches. Fresh locked wheel/sdist/complete-source environments outside checkout qualify console/module CLI, all twelve private cases/reset, real installed three-role SDK/CLI over owned HTTP, exclusive report publication and missing-key failure receipts. The entire89-check suite runs from the complete archived source and preserves every original archived file hash. Repeated archive bytes agree. CI uploads distributions plus qualification.json; no package publication/license choice is implied.
 
-Independent application implementation is complete; exact final Linux/data/distribution evidence is recorded in the catalog. Live provider/semantic/billing review, authenticated Firedrill persistence verification and publication/license remain parked. [PLAN.md](PLAN.md) retains the portfolio handoff.
+Independent application implementation is complete; exact final Linux/data/distribution evidence is recorded in the catalog. Live provider/semantic/billing review, authenticated Firedrill persistence verification and license remain parked. [PLAN.md](PLAN.md) retains the portfolio handoff.
 
 ## Current Firedrill integration
 
