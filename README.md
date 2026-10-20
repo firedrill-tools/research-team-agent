@@ -25,7 +25,7 @@ The example pack has an archived 60-minute and current 30-minute incident acknow
 
 The gate does not establish semantic entailment of a claim from its quote; the checker and a human reviewer still need to assess that. Local tests invoke the actual sequential CrewAI tasks with a stub LLM and test the independent gate. They do not prove a live model run. A real run requires provider credentials, model availability and measured output. A checked-in Firedrill adapter uses the released CLI/SDK; authenticated persisted-run verification remains separate. Dependencies are locked in `uv.lock`.
 
-Explore related applications in the [Firedrill example catalog](https://github.com/firedrill-tools/firedrill-example-catalog). Product and setup references: [Firedrill](https://firedrill.run/) and the [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release; this repository records its current integration limits above.
+Explore related applications in the [Firedrill examples](https://docs.firedrill.run/guides/examples). Product and setup references: [Firedrill](https://firedrill.run/) and the [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release; this repository records its current integration limits above.
 
 
 ## Initial contract checkpoint
